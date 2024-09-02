@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Random Matching</title>
+</head>
+<body>
+<h1>Random Matching</h1>
+<form action="/search" method="post">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Search</button>
+</form>
+
+<div th:if="${user != null}">
+    <p>User added: <span th:text="${user.name}"></span></p>
+</div>
+</body>
+</html>
